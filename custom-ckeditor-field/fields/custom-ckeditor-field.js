@@ -27,8 +27,9 @@ define(function(require, exports, module) {
         afterRenderControl: function(model, callback)
         {
             var self = this;
-
-            callback();
+            self.base(model, function(){
+                callback();
+            });
         },
 
         /**
